@@ -1,8 +1,8 @@
-var currentTime = moment().format("dddd, MMMM Do"),
+var currentDay = moment().format("dddd, MMMM Do"),
     HH = moment().format("HH");
 
-// push current day 
-$("#currentDay").html(currentTime);
+// push current day
+$("#currentDay").html(currentDay);
 
 // append empty time blocks
 $(".container").append('<div class="time-block"><div class="row"><div class="hour">9:00 am</div><div id="9" class="description"><textarea id="save9t" rows="4" cols ="117"></textarea></div><div class="saveBtn"><i id="save9" class="fa fa-floppy-o"></i></div></div></div>');
@@ -17,8 +17,8 @@ $(".container").append('<div class="time-block"><div class="row"><div class="hou
 
 // loop over time blocks - check style against current time and pull any saved data
 for (var i = 9; i < 18; i++) {
-    var timeBlock = document.getElementById(i);
-    var pullSave = "save" + i + "t";
+    var timeBlock = document.getElementById(i),
+        pullSave = "save" + i + "t";
     if (i < HH) {
         timeBlock.classList.add("past");
     }
@@ -33,7 +33,7 @@ for (var i = 9; i < 18; i++) {
 
 // onclick for save buttons
 $("i").click(function() {
-    var clickSave = $(this).attr("id") + "t";
-    var saveThis = document.getElementById(clickSave).value
+    var clickSave = $(this).attr("id") + "t",
+        saveThis = document.getElementById(clickSave).value;
     localStorage.setItem(clickSave, saveThis);
 });

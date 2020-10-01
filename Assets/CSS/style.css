@@ -59,6 +59,10 @@ textarea {
     line-height: 86px;
 }
 
+.saveBtn i {
+    padding: 10px;
+}
+
 .saveBtn i:hover {
     font-size: 20px;
     transition: all .3s ease-in-out;
