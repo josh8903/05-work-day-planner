@@ -13,16 +13,7 @@ body {
 }
 
 
-/* .contsiner div parent el, bootstrap? */
-
-
-/* one of these is main el */
-
-
-/* row bootstrap? */
-
-
-/* time block = main el? */
+/* main el */
 
 .time-block {
     text-align: center;
@@ -45,9 +36,6 @@ body {
 .description {
     white-space: pre-wrap;
 }
-
-
-/* text area - not a class or id???wtf */
 
 textarea {
     background: transparent;
@@ -76,8 +64,11 @@ textarea {
     transition: all .3s ease-in-out;
 }
 
-
-/* ??? */
+.saveBtn i:active {
+    color: blue;
+    font-size: 40px;
+    transition: all .05s ease-in-out;
+}
 
 
 /* Time styles */
