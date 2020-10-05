@@ -7,11 +7,15 @@ $("#currentDay").html(moment().format("dddd, MMMM Do"));
 
 // append time blocks to body -- set time styles -- populate saved text
 for (var i = 9; i <= 17; i++) {
-    $(".container").append('<div class="time-block"><div class="row"><div class="hour">' +
-        time[i - 9] + '</div><div id="' +
-        i + '" class="description"><textarea id="save' +
-        i + 't" rows="4" cols ="117"></textarea></div><div class="saveBtn"><i id="save' +
-        i + '" class="fa fa-floppy-o"></i></div></div></div>');
+    $(".container").append(`
+    <div class="time-block">
+        <div class="row">
+            <div class="hour">${time[i - 9]}</div>
+            <div id="${i}" class="description"><textarea id="save${i}t" rows="4" width="inherit"></textarea></div>
+            <div class="saveBtn"><i id="save${i}" class="fa fa-floppy-o"></i></div>
+        </div>
+    </div>
+    `);
     var textDiv = document.getElementById(i),
         text = "save" + i + "t";
     if (i < currentHour) {

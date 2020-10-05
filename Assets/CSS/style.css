@@ -21,6 +21,7 @@ body {
 }
 
 .row {
+    justify-content: center;
     white-space: pre-wrap;
     height: 87px;
     border-top: 1px solid white;
@@ -34,10 +35,13 @@ body {
 }
 
 .description {
+    width: fit-content;
     white-space: pre-wrap;
 }
 
 textarea {
+    width: 50vw;
+    max-width: 980px;
     background: transparent;
     border: none;
     resize: none;
